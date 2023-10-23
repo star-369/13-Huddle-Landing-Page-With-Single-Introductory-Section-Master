@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: var(--barlow-semi-condensed);
+  color: white;
+  @include grid-center;
+  background: var(--violet-primary);
+  @include breakpoints(medium) {
+    overflow: hidden;
+  }
+}

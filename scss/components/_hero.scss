@@ -1,0 +1,99 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins" as *;
+
+.hero {
+  width: 380px;
+  padding: 2rem 0;
+  position: relative;
+  // background: gray;
+  &__image {
+    svg:nth-child(1) {
+      width: 200px;
+      height: 30pt;
+      margin-bottom: 2rem;
+    }
+    svg:nth-child(2) {
+      width: 380px;
+      height: 220px;
+    }
+  }
+  &__tagline {
+    text-align: center;
+    margin: auto 0;
+    padding: 0 2rem;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    button {
+      background: white;
+      border-radius: 9999px;
+      color: var(--violet-primary);
+      border: none;
+      padding: 0.5rem 4rem;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      &:hover {
+        background: var(--soft-magenta);
+        color: white;
+      }
+    }
+  }
+  &__background-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    svg:nth-child(1) {
+      display: none;
+      width: 1070px;
+      height: 650px;
+    }
+    svg:nth-child(2) {
+      width: 385px;
+      height: 383px;
+    }
+  }
+
+  @include breakpoints(medium) {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 3rem;
+    display: flex;
+    gap: 2rem;
+    &__image {
+      svg:nth-child(1) {
+        width: 200px;
+        height: 30pt;
+      }
+      svg:nth-child(2) {
+        width: 660px;
+        height: 470px;
+      }
+    }
+    &__tagline {
+      text-align: left;
+      h1 {
+        font-size: 3rem;
+        width: 23ch;
+      }
+      h2 {
+        width: 50ch;
+      }
+    }
+    &__background-texture {
+      svg:nth-child(1) {
+        display: block;
+      }
+      svg:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

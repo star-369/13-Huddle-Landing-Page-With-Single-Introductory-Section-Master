@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --violet-primary: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --poppins: "";
+  --open-sans: "";
+}
+
+$breakpoints: (
+  "small": 640px,
+  "medium": 768px,
+  "large": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px,
+);
